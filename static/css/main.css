@@ -1,0 +1,21 @@
+/* HEADER */
+
+header {
+    position: sticky;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #242c26;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.header_logo{
+    height: 40px;
+    width: 40px;
+}
+
+/* BODY */
+
+body{
+    background-color: darkslategray;
+}
