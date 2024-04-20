@@ -1,11 +1,12 @@
 /* HEADER */
 
-header {
+header{
     position: sticky;
-    padding: 10px;
+    top: 0;
+    padding: 20px;
     z-index: 1000;
     background-color: #242c26;
-    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 5px 25px rgba(14, 4, 4, 0.15);
         box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -18,4 +19,27 @@ header {
 
 body{
     background-color: darkslategray;
+    margin: 0;
+}
+
+.page {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    flex: 1 1 auto;
+}
+
+/* FOOTER */
+
+footer{
+    padding: 20px;
+    background-color: #242c26;
 }

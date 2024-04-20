@@ -11,23 +11,40 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
-        <div class="container">
-            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <div class="container">
+        <div class="page">
+          <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none" width=10>
                   <img class="header_logo" src="{{url_for('static', filename='image/logo.png')}}" alt="logo">
-                  <span class="fs-4">Название фирмы</span>
+                  <span class="fs-4">АУРУС</span>
                 </a>
-                
-                <ul class="nav nav-pills">
-                  <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link active" aria-current="page">Главная</a></li>
-                  <li class="nav-item"><a href="{{ url_for('news') }}" class="nav-link">Новости</a></li>
-                  <li class="nav-item"><a href="{{ url_for('projects') }}" class="nav-link">Проекты</a></li>
-                  <li class="nav-item"><a href="{{ url_for('gallery') }}" class="nav-link">Галерея</a></li>
-                  <li class="nav-item"><a href="{{ url_for('about') }}" class="nav-link">О нас</a></li>
-                </ul>
-              </header>
-        </div>
-        {% block body %}{% endblock %}
-        <script src="" async defer></script>
+                  <ul class="nav nav-pills">
+                   <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link active" aria-current="page">Главная</a></li>
+                   <li class="nav-item"><a href="{{ url_for('news') }}" class="nav-link">Новости</a></li>
+                   <li class="nav-item"><a href="{{ url_for('projects') }}" class="nav-link">Проекты</a></li>
+                   <li class="nav-item"><a href="{{ url_for('gallery') }}" class="nav-link">Галерея</a></li>
+                   <li class="nav-item"><a href="{{ url_for('about') }}" class="nav-link">О нас</a></li>
+                  </ul>
+          </header>
+              <main class="content">
+                {% block body %}{% endblock %}
+              </main>
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                  <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+              </div>
+          
+              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+              </ul>
+            </footer>
+         </div>
+      </div>
+      <script src="" async defer></script>
     </body>
 </html>
